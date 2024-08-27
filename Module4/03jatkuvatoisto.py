@@ -1,5 +1,6 @@
 print("Press enter when you want to end the program.")
 n_str = input("Enter a number: ")
+
 if n_str == "":
     print("Ei annettuja lukuja.")
 
