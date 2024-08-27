@@ -1,23 +1,19 @@
 print("Press enter when you want to end the program.")
-n = input("Enter a number: ")
-biggest = n
-smallest = n
+n_str = input("Enter a number: ")
+if n_str == "":
+    print("Ei annettuja lukuja.")
 
-while n != "":
-    n = input("Enter another number: ")
-    print("n: " + str(n))
-    print("suurin " + str(biggest))
-    print("pienin " + str(smallest))
-    print()
-    if n > biggest:
-        biggest = n
-    if n < smallest:
-        smallest = n
-    print("Muutoksen jälkeen:")
-    print("n: " + str(n))
-    print("suurin " + str(biggest))
-    print("pienin " + str(smallest))
-    print()
+else:
+    biggest = float(n_str)
+    smallest = float(n_str)
 
-print("The biggest number is", biggest)
-print("The smallest number is", smallest)
+    while n_str != "":
+        n = float(n_str)
+        if n > biggest:
+            biggest = n
+        if n < smallest:
+            smallest = n
+        n_str = input("Enter another number: ")
+
+    print("The biggest number is", str(biggest))
+    print("The smallest number is", str(smallest))
