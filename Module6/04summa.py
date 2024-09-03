@@ -4,6 +4,6 @@ def summaa(luvut):
         summa += n
     return summa
 
-lista = [3, 55, -5, 0]
+lista = [1, 55.4, -10, 0]
 
 print(summaa(lista))
