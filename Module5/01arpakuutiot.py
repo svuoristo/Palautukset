@@ -3,7 +3,10 @@ import random
 lkm = int(input("Anna arpakuutioiden määrä kokonaislukuna: "))
 summa = 0
 
-for noppa in range(1, lkm + 1):
-    summa = summa + random.randint(1, 6)
+for noppa in range(lkm):
+    n = random.randint(1, 6)
+#    print("noppa: " + str(n))
+    summa += n
+#    print("summa: " + str(summa))
 
 print(str(summa))
