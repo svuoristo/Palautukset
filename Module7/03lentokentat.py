@@ -13,7 +13,10 @@ while selected != 'lopeta':
         selected = input(options)
     elif selected == 'hae':
         code = input("Anna lentokentän ICAO-koodi: ")
-        print(f"Lentokenttä {code} on nimeltään {airports[code]}.")
+        if code in airports.keys():
+            print(f"Lentokenttä {code} on nimeltään {airports[code]}.")
+        else:
+            print("Lentokenttää ei löytynyt.")
         selected = input(options)
     else:
         selected = input(options)
