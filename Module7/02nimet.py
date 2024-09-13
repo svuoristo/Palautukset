@@ -1,5 +1,6 @@
 name = input("Anna nimi: ")
 names = set()
+
 while name != "":
     if name in names:
         print("Aiemmin syötetty nimi.")

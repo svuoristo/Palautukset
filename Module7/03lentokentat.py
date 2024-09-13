@@ -11,6 +11,7 @@ while selected != 'lopeta':
         name = input("Anna lentokentän nimi: ")
         airports[code] = name
         selected = input(options)
+
     elif selected == 'hae':
         code = input("Anna lentokentän ICAO-koodi: ")
         if code in airports.keys():
@@ -18,6 +19,7 @@ while selected != 'lopeta':
         else:
             print("Lentokenttää ei löytynyt.")
         selected = input(options)
+
     else:
         selected = input(options)
 
