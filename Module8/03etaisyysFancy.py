@@ -9,7 +9,7 @@ connection = mysql.connector.connect(
          password='moro3',
          autocommit=True,
          collation = "utf8mb4_general_ci",
-         )
+)
 
 def location(icao):
     sql = f"SELECT name, latitude_deg, longitude_deg FROM Airport WHERE ident = '{icao}'"
@@ -24,22 +24,16 @@ def location(icao):
     return result
 
 
-icao1 = input("Enter an airport's ICAO code: ")
-icao2 = input("Enter another airport's ICAO code: ")
-
-airport1 = location(icao1)
-airport2 = location(icao2)
+airport1 = location(input("Enter an airport's ICAO code: "))
+airport2 = location(input("Enter another airport's ICAO code: "))
 
 
 if (airport1 or airport2) is None:
     print("Couldn't find neither airport.")
-
 elif airport1 is None:
     print("Couldn't find the first airport.")
-
 elif airport2 is None:
     print("Couldn't find the second airport.")
-
 else:
     print(
         f"The distance between "
