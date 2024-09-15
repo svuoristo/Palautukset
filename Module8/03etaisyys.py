@@ -18,9 +18,8 @@ def location(airportcode):
     result = cursor.fetchall()
     return result
 
-airport1 = input("Enter airport's ICAO code: ")
+airport1 = input("Enter an airport's ICAO code: ")
 airport2 = input("Enter another airport's ICAO code: ")
-
 
 print(f"The distance is about {distance(location(airport1), location(airport2)).km:.2f} km.")
 
