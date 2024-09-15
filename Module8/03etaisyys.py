@@ -18,16 +18,22 @@ def location(airportcode):
     result = cursor.fetchall()
     return result
 
+airport1 = input("Enter airport's ICAO code: ")
+airport2 = input("Enter another airport's ICAO code: ")
+
+
+print(f"The distance is about {distance(location(airport1), location(airport2)).km:.2f} km.")
+
+
+
+# if you want to include the names of the airports:
+'''
 def name(airportcode):
     sql = f"SELECT name FROM Airport WHERE ident = '{airportcode}'"
     cursor = connection.cursor()
     cursor.execute(sql)
     result = cursor.fetchall()
-    print(result)
     return (result[0])[0]
-
-airport1 = input("Enter airport's ICAO code: ")
-airport2 = input("Enter another airport's ICAO code: ")
 
 try:
     print(f"The distance between "
@@ -35,4 +41,5 @@ try:
           f"{distance(location(airport1), location(airport2)).km:.2f} "
           f"km.")
 except IndexError:
-    print("Lentokenttää ei löytynyt.")
+    print("No airports found.") 
+'''
