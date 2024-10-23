@@ -16,6 +16,7 @@ def location(airportcode):
     cursor = connection.cursor()
     cursor.execute(sql)
     result = cursor.fetchall()
+    print(result)
     return result
 
 icao1 = input("Enter an airport's ICAO code: ")
