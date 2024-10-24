@@ -24,12 +24,14 @@ class Auto:
 
 
 # t. 1
+print("t. 1")
 punainen_auto = Auto("ABC-123", 142)
 print(f"Auton {punainen_auto.rekisteritunnus:s} kulkee nopeimmillaan {punainen_auto.huippunopeus:d} km/h. "
       f"Nyt sen nopeus on {punainen_auto.nopeus:d} km/h "
       f"ja sillä on kuljettu {punainen_auto.kuljettu_matka:d} km.")
 
 # t. 2
+print("t. 2")
 punainen_auto.kiihdyta(30)
 punainen_auto.kiihdyta(70)
 punainen_auto.kiihdyta(50)
@@ -38,6 +40,7 @@ punainen_auto.kiihdyta(-200)
 print(punainen_auto.nopeus)
 
 # t. 3
+print("t. 3")
 punainen_auto.kiihdyta(100)
 punainen_auto.kulje(20)
 print(punainen_auto.kuljettu_matka)
@@ -46,6 +49,7 @@ punainen_auto.kulje(1.5)
 print(punainen_auto.kuljettu_matka)
 
 # t. 4
+print("t. 4")
 autot = []
 for num in range(10):
     rekkari = f'ABC-{num + 1}'
