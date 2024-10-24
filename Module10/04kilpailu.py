@@ -56,13 +56,13 @@ for num in range(10):
 big_romu_race = Race("Suuri romuralli", 8000, boyz_cars)
 
 hours = 0
-while True:
+while not big_romu_race.race_over():
     big_romu_race.hour_passes()
     hours += 1
-    if big_romu_race.race_over():
-        print(f"\nKisa päättyi! Sitä ajettiin {hours} tuntia. Onnea voittajalle.")
-        big_romu_race.print_status()
-        break
+
     if hours % 10 == 0:
         print(f"\nKisaa on ajettu {hours} tuntia.")
         big_romu_race.print_status()
+
+print(f"\nKisa päättyi! Sitä ajettiin {hours} tuntia. Onnea voittajalle.")
+big_romu_race.print_status()
