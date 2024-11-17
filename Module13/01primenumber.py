@@ -1,6 +1,5 @@
-from flask import Flask, request, Response
+from flask import Flask, Response
 import json
-from setuptools.unicode_utils import try_encode
 
 app = Flask(__name__)
 @app.route('/primenumber/<number>')
